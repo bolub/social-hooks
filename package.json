@@ -1,10 +1,10 @@
 {
-  "name": "@tife/social-hooks",
+  "name": "social-hooks",
   "version": "0.1.0",
   "license": "MIT",
   "author": "bolub",
   "main": "dist/index.js",
-  "module": "dist/@tife/social-hooks.esm.js",
+  "module": "dist/social-hooks.esm.js",
   "typings": "dist/index.d.ts",
   "files": [
     "dist",
@@ -43,11 +43,11 @@
   },
   "size-limit": [
     {
-      "path": "dist/@tife/social-hooks.cjs.production.min.js",
+      "path": "dist/social-hooks.cjs.production.min.js",
       "limit": "10 KB"
     },
     {
-      "path": "dist/@tife/social-hooks.esm.js",
+      "path": "dist/social-hooks.esm.js",
       "limit": "10 KB"
     }
   ],
