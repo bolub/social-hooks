@@ -1,0 +1,79 @@
+{
+  "name": "@tife/social-hooks",
+  "version": "0.1.0",
+  "license": "MIT",
+  "author": "bolub",
+  "main": "dist/index.js",
+  "module": "dist/@tife/social-hooks.esm.js",
+  "typings": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "src"
+  ],
+  "scripts": {
+    "analyze": "size-limit --why",
+    "build": "dts build",
+    "build-storybook": "storybook build",
+    "lint": "dts lint",
+    "prepare": "dts build",
+    "size": "size-limit",
+    "start": "dts watch",
+    "storybook": "storybook dev -p 6006",
+    "test": "dts test --passWithNoTests"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "dts lint"
+    }
+  },
+  "prettier": {
+    "printWidth": 80,
+    "semi": true,
+    "singleQuote": true,
+    "trailingComma": "es5"
+  },
+  "jest": {
+    "testEnvironment": "jsdom"
+  },
+  "peerDependencies": {
+    "react": ">=16"
+  },
+  "engines": {
+    "node": ">=12"
+  },
+  "size-limit": [
+    {
+      "path": "dist/@tife/social-hooks.cjs.production.min.js",
+      "limit": "10 KB"
+    },
+    {
+      "path": "dist/@tife/social-hooks.esm.js",
+      "limit": "10 KB"
+    }
+  ],
+  "devDependencies": {
+    "@babel/core": "^7.23.9",
+    "@size-limit/preset-small-lib": "^11.0.2",
+    "@storybook/addon-essentials": "^8.0.0-beta.2",
+    "@storybook/addon-info": "^6.0.0-alpha.2",
+    "@storybook/addon-links": "^8.0.0-beta.2",
+    "@storybook/addons": "^7.6.0-beta.2",
+    "@storybook/react": "^8.0.0-beta.2",
+    "@storybook/react-vite": "^8.0.0-beta.2",
+    "@tsconfig/recommended": "^1.0.3",
+    "@tsconfig/vite-react": "^3.0.0",
+    "@types/react": "^18.2.55",
+    "@types/react-dom": "^18.2.19",
+    "babel-loader": "^9.1.3",
+    "dts-cli": "^2.0.4",
+    "husky": "^9.0.10",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-is": "^18.2.0",
+    "size-limit": "^11.0.2",
+    "storybook": "^8.0.0-beta.2",
+    "tslib": "^2.6.2",
+    "typescript": "^5.3.3",
+    "vite": "^5.1.1"
+  }
+}
