@@ -1,4 +1,16 @@
-export type Social = 'twitter' | 'linkedIn' | 'whatsapp' | 'pinterest';
+export type Social =
+  | "twitter"
+  | "linkedIn"
+  | "whatsapp"
+  | "pinterest"
+  | "facebook"
+  | "telegram"
+  | "linkedIn"
+  | "vkontakte"
+  | "odnoklassniki"
+  | "reddit"
+  | "tumblr"
+  | "mailru";
 
 export type SocialAssetColor = {
   name: string;

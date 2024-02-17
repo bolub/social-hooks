@@ -1,19 +1,23 @@
-import { SocialToUrl, SocialToUrl2, shareIds } from './constants';
+import { socialBaseUrl, shareIds, getSocialUrlsWithIds } from "./constants";
 
 export const formatSocialShareUrl = ({
   imageUrl,
   text,
   url,
+  description,
 }: {
   url?: string;
   text?: string;
   imageUrl?: string;
+  description?: string;
 }) => {
   // @ts-ignore
   let total: Record<Social, string> = {};
 
-  SocialToUrl2.forEach((social) => {
-    const baseUrl = SocialToUrl[social.id];
+  const socialUrlsWithIds = getSocialUrlsWithIds();
+
+  socialUrlsWithIds.forEach((social) => {
+    const baseUrl = socialBaseUrl[social.id];
     const socialIds = shareIds[social.id];
 
     const urlObject = new URL(baseUrl);
@@ -28,6 +32,10 @@ export const formatSocialShareUrl = ({
 
     if (socialIds.image && imageUrl) {
       urlObject.searchParams.set(socialIds.image, imageUrl);
+    }
+
+    if (socialIds.description && description) {
+      urlObject.searchParams.set(socialIds.description, description);
     }
 
     total = {
