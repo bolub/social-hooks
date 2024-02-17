@@ -84,6 +84,11 @@ const Demo = () => {
 ```
 
 
+#### Supported Parameters
+- colors
+
+
+
 ## Supported
 - Facebook
 - X (formerly Twitter)
