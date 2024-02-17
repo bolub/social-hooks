@@ -1,5 +1,6 @@
 {
   "name": "social-hooks",
+  "author": "bolub",
   "license": "MIT",
   "version": "0.0.1",
   "main": "dist/index.js",
@@ -7,14 +8,25 @@
   "types": "dist/index.d.ts",
   "scripts": {
     "build": "tsup src/index.ts --format cjs,esm --dts",
-    "lint": "tsc"
+    "lint": "tsc",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
   },
   "devDependencies": {
     "@changesets/cli": "^2.27.1",
+    "@storybook/addon-essentials": "^7.6.16",
+    "@storybook/addon-interactions": "^7.6.16",
+    "@storybook/addon-links": "^7.6.16",
+    "@storybook/addon-onboarding": "^1.0.11",
+    "@storybook/blocks": "^7.6.16",
+    "@storybook/react": "^7.6.16",
+    "@storybook/react-webpack5": "^7.6.16",
+    "@storybook/test": "^7.6.16",
     "@types/react": "^18.2.56",
     "@types/react-dom": "^18.2.19",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "storybook": "^7.6.16",
     "tsup": "^8.0.2",
     "typescript": "^5.3.3"
   },
