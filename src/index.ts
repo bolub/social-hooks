@@ -1,3 +1,1 @@
-export const hello = () => {
-  return "hi";
-};
+export { Buttons } from "./Buttons";
