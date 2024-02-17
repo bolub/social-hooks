@@ -12,13 +12,13 @@ pnpm add social-hooks
 
 ## Hooks
 
-## useSocialShare
+### useSocialShare
 A custom hook for generating social media share URLs. This hook formats the share URL based on the specified social media platform and supported parameters.
 
 Note that each social media platform has its own set of supported parameters.
 
 &nbsp;
-## Usage
+#### Usage
 
 ```tsx
 import { useSocialShare } from 'social-hooks';
@@ -37,7 +37,7 @@ const Demo = () => {
 };
 ```
 
-### Supported Parameters
+#### Supported Parameters
 
 - `url` - URL to be shared.
 - `text` - Text content to be shared.
@@ -45,11 +45,11 @@ const Demo = () => {
 - `description` - Description to be shared
 
 
-## useSocialAssets
+### useSocialAssets
 A custom hook for getting social media assets such as colors, ... etc
 
 &nbsp;
-## Usage
+#### Usage
 
 ```tsx
 import { useSocialAssets } from 'social-hooks';
@@ -79,8 +79,6 @@ const Demo = () => {
   );
 };
 ```
-
-
 
 
 ## Supported
