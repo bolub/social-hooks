@@ -17,7 +17,7 @@ A custom hook for generating social media share URLs. This hook formats the shar
 
 Note that each social media platform has its own set of supported parameters.
 
-&nbsp;
+
 #### Usage
 
 ```tsx
@@ -45,13 +45,13 @@ const Demo = () => {
 - `description` - Description to be shared
 
 
-
-&nbsp;
+<br/>
+<br/>
 
 ### useSocialAssets
 A custom hook for getting social media assets such as colors, ... etc
 
-&nbsp;
+
 #### Usage
 
 ```tsx
