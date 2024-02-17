@@ -1,16 +1,23 @@
-module.exports = {
-  stories: ['../stories/**/*.stories.@(ts|tsx|js|jsx)', '../**/*.mdx'],
-  addons: ['@storybook/addon-links', '@storybook/addon-essentials'],
-  // https://storybook.js.org/docs/react/configure/typescript#mainjs-configuration
-  typescript: {
-    check: true, // type-check stories during Storybook build
-  },
+import type { StorybookConfig } from "@storybook/react-webpack5";
 
+const config: StorybookConfig = {
+  stories: ["../src/**/*.mdx", "../src/**/*.stories.@(js|jsx|mjs|ts|tsx)"],
+  addons: [
+    "@storybook/addon-links",
+    "@storybook/addon-essentials",
+    "@storybook/addon-onboarding",
+    "@storybook/addon-interactions",
+  ],
   framework: {
-    name: '@storybook/react-vite',
-    options: {},
+    name: "@storybook/react-webpack5",
+    options: {
+      builder: {
+        useSWC: true,
+      },
+    },
   },
   docs: {
-    autodocs: true,
+    autodocs: "tag",
   },
 };
+export default config;

@@ -1,79 +1,37 @@
 {
   "name": "social-hooks",
-  "version": "0.1.0",
-  "license": "MIT",
   "author": "bolub",
+  "license": "MIT",
+  "version": "0.0.2",
   "main": "dist/index.js",
-  "module": "dist/social-hooks.esm.js",
-  "typings": "dist/index.d.ts",
-  "files": [
-    "dist",
-    "src"
-  ],
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
   "scripts": {
-    "analyze": "size-limit --why",
-    "build": "dts build",
-    "build-storybook": "storybook build",
-    "lint": "dts lint",
-    "prepare": "dts build",
-    "size": "size-limit",
-    "start": "dts watch",
+    "build": "tsup src/index.ts --format cjs,esm --dts",
+    "lint": "tsc",
     "storybook": "storybook dev -p 6006",
-    "test": "dts test --passWithNoTests"
+    "build-storybook": "storybook build"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "dts lint"
-    }
-  },
-  "prettier": {
-    "printWidth": 80,
-    "semi": true,
-    "singleQuote": true,
-    "trailingComma": "es5"
-  },
-  "jest": {
-    "testEnvironment": "jsdom"
-  },
-  "peerDependencies": {
-    "react": ">=16"
-  },
-  "engines": {
-    "node": ">=12"
-  },
-  "size-limit": [
-    {
-      "path": "dist/social-hooks.cjs.production.min.js",
-      "limit": "10 KB"
-    },
-    {
-      "path": "dist/social-hooks.esm.js",
-      "limit": "10 KB"
-    }
-  ],
   "devDependencies": {
-    "@babel/core": "^7.23.9",
-    "@size-limit/preset-small-lib": "^11.0.2",
-    "@storybook/addon-essentials": "^8.0.0-beta.2",
-    "@storybook/addon-info": "^6.0.0-alpha.2",
-    "@storybook/addon-links": "^8.0.0-beta.2",
-    "@storybook/addons": "^7.6.0-beta.2",
-    "@storybook/react": "^8.0.0-beta.2",
-    "@storybook/react-vite": "^8.0.0-beta.2",
-    "@tsconfig/recommended": "^1.0.3",
-    "@tsconfig/vite-react": "^3.0.0",
-    "@types/react": "^18.2.55",
+    "@changesets/cli": "^2.27.1",
+    "@storybook/addon-essentials": "^7.6.16",
+    "@storybook/addon-interactions": "^7.6.16",
+    "@storybook/addon-links": "^7.6.16",
+    "@storybook/addon-onboarding": "^1.0.11",
+    "@storybook/blocks": "^7.6.16",
+    "@storybook/react": "^7.6.16",
+    "@storybook/react-webpack5": "^7.6.16",
+    "@storybook/test": "^7.6.16",
+    "@types/react": "^18.2.56",
     "@types/react-dom": "^18.2.19",
-    "babel-loader": "^9.1.3",
-    "dts-cli": "^2.0.4",
-    "husky": "^9.0.10",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-is": "^18.2.0",
-    "size-limit": "^11.0.2",
-    "storybook": "^8.0.0-beta.2",
-    "tslib": "^2.6.2",
-    "typescript": "^5.3.3",
-    "vite": "^5.1.1"
+    "storybook": "^7.6.16",
+    "tsup": "^8.0.2",
+    "typescript": "^5.3.3"
+  },
+  "peerDependencies": {
+    "react": ">=16",
+    "react-dom": ">=16"
   }
 }

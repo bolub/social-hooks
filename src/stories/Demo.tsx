@@ -1,10 +1,10 @@
-import React from 'react';
-import { useSocialShare } from '../src/hooks/useSocialShare';
-import { useSocialAssets } from '../src/hooks/useSocialAssets';
+import React from "react";
+import { useSocialShare } from "../hooks/useSocialShare";
+import { useSocialAssets } from "../hooks/useSocialAssets";
 
 export const Demo = () => {
   const { twitter } = useSocialShare({
-    url: 'https://boluabiola.com',
+    url: "https://boluabiola.com",
   });
 
   const assets = useSocialAssets();
